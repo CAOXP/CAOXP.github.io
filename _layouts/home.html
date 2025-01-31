@@ -120,3 +120,24 @@ refactor: true
 {% if paginator.total_pages > 1 %}
   {% include post-paginator.html %}
 {% endif %}
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <h1>{{ site.title }}</h1>
+    </header>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <p>© 2023 {{ site.title }}</p>
+    </footer>
+</body>
+</html>
